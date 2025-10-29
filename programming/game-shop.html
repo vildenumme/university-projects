@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipment Shop</title>
+    <!-- 
+        Denne CSS'en er kun lagt til for å gi litt design til nettsiden, men er ikke målet med forelesningen. JavaScript er hensikten med emnet. 
+    -->
+    <link rel="stylesheet" href="css/game-shop.css" />
+    <link rel="icon" href="images/gold_coin.png" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Equipment Shop</h1>
+
+      <div style="margin-bottom: 1rem">
+        <!-- Hvor mye gull brukeren har -->
+        <img class="gold-coin" src="images/gold_coin.png" />
+        <span id="gold-span"></span>
+      </div>
+
+      <div id="shop-owner">
+        <img src="images/shop-owner.png" />
+      </div>
+      <!-- Hva butikk-eieren sier til oss -->
+      <p id="keeper-speaks-p">...</p>
+
+      <section class="product-section">
+        <article>
+          <h3>Sverd</h3>
+          <img
+            id="sword-image"
+            title="Klikk for retur"
+            class="product-image"
+            src="images/sword_1.png"
+          />
+          <!-- Pris på sverd -->
+          <p>Pris: <span id="sword-price-span"></span> gullmynter</p>
+          <button id="buy-sword-btn">
+            Kjøp sverd (<span id="number-of-swords-span">0</span>)
+          </button>
+        </article>
+
+        <article>
+          <h3>Skjold</h3>
+          <img
+            id="shield-image"
+            class="product-image"
+            src="images/shield_old.png"
+          />
+          <!-- Pris på skjold -->
+          <p>Pris: <span id="shield-price-span"></span> gullmynter</p>
+          <button id="buy-shield-btn">
+            Kjøp skjold (<span id="number-of-shields-span">0</span>)
+          </button>
+        </article>
+      </section>
+      <!-- Skrive ut hva brukeren har kjøpt -->
+      <h3>Dine kjøp</h3>
+      <div id="output-div"></div>
+    </div>
+
+    <script>
+      //HTML objects
+      const goldSpan = document.getElementById("gold-span");
+      const keeperSpeaksP = document.getElementById("keeper-speaks-p");
+      const swordPriceSpan = document.getElementById("sword-price-span");
+      const shieldPriceSpan = document.getElementById("shield-price-span");
+      /*knapp */ const buySwordBtn = document.getElementById("buy-sword-btn");
+      /*knapp */ const buyShieldBtn = document.getElementById("buy-shield-btn");
+      const numberOfSwordsSpan = document.getElementById(
+        "number-of-swords-span"
+      );
+      const numberOfShieldsSpan = document.getElementById(
+        "number-of-shields-span"
+      );
+      const outPutDiv = document.getElementById("output-div");
+
+      // Variables, objects, arrays
+      const playerInfo = {
+        name: "Knight Vilde",
+        gold: 550,
+        numberOfSwords: 0,
+        numberOfShields: 0,
+        hp: 400,
+        xp: 5,
+        ad: 2,
+      };
+
+      const shopKeeperInfo = {
+        name: "Beardy Bigskjegg",
+        greeting: "Hei, og velkommen! Hva kan jeg hjelpe deg med?",
+        angry1: "Prøver du å lure meg? Du har ikke nok gull!",
+        happy1: "Flott kjøp!",
+      };
+
+      const swordInfo = {
+        name: "Viking sword",
+        price: 70,
+      };
+
+      const ShieldInfo = {
+        name: "Viking Shield",
+        price: 50,
+      };
+
+      // Funksjoner
+      function initGUI() {
+        goldSpan.innerHTML = playerInfo.gold;
+        keeperSpeaksP.innerHTML = shopKeeperInfo.greeting;
+        swordPriceSpan.innerHTML = swordInfo.price;
+        shieldPriceSpan.innerHTML = ShieldInfo.price;
+      }
+
+      function buySword() {
+        //Sjekk om brukern har nok gull, har brukern 70gull eller mer?
+
+        if (playerInfo.gold >= swordInfo.price) {
+          //Dette handler om gull
+          playerInfo.gold -= swordInfo.price;
+          goldSpan.innerHTML = playerInfo.gold;
+
+          // Dette handler om sverd.
+          // ++ betyr øk med 1
+          playerInfo.numberOfSwords++;
+          // Vi må oppdatere nettsiden også
+          numberOfSwordsSpan.innerHTML = playerInfo.numberOfSwords;
+
+          // Når det går bra å kjøpe et sverd = gjør teksten grønn
+          keeperSpeaksP.innerHTML = shopKeeperInfo.happy1;
+          keeperSpeaksP.style.color = "green";
+
+          outPutDiv.innerHTML += `
+          <img src="images/sword_1.png">
+          `;
+        } else {
+          keeperSpeaksP.innerHTML = shopKeeperInfo.angry1;
+          keeperSpeaksP.style.color = "red";
+        }
+      }
+
+      function buyShield() {
+        if (playerInfo.gold >= ShieldInfo.price) {
+          playerInfo.gold -= ShieldInfo.price;
+          goldSpan.innerHTML = playerInfo.gold;
+
+          playerInfo.numberOfShields++;
+          numberOfShieldsSpan.innerHTML = playerInfo.numberOfShields;
+
+          keeperSpeaksP.innerHTML = shopKeeperInfo.happy1;
+          keeperSpeaksP.style.color = "green";
+
+          outPutDiv.innerHTML += `<img src="images/shield_old.png">`;
+        } else {
+          keeperSpeaksP.innerHTML = shopKeeperInfo.angry1;
+          keeperSpeaksP.style.color = "red";
+        }
+      }
+      // Kall på funksjoner
+      initGUI();
+
+      // Event-setting (klikk, dobbeltklikk, peke, skrive på tastaturet osv)
+      buySwordBtn.onclick = buySword;
+      // Når knappen klikkes på, skal dette skje = buySword
+      buyShieldBtn.onclick = buyShield;
+    </script>
+  </body>
+</html>
