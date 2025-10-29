@@ -2,7 +2,9 @@
 
 A short revision project demonstrating core JavaScript concepts such as variables, objects, functions, DOM manipulation, events, conditions, and simple UI state handling.
 
-### What This Project Covers
+![giphy (5)](https://github.com/user-attachments/assets/e2ef6262-b45f-492f-a47c-409d89f19ba3)
+
+### What this project covers
 - **Variables & objects:** `playerInfo`, `shopKeeperInfo`, `swordInfo`, `ShieldInfo`
 - **DOM manipulation:** `document.getElementById`, updating `innerHTML` and `style`
 - **Functions:** `initGUI`, `buySword`, `buyShield`
@@ -11,16 +13,17 @@ A short revision project demonstrating core JavaScript concepts such as variable
 - **Template literals:** using backticks (`` `...` ``) to dynamically add images to the output div
 
 ### Folder Structure
+```
 project-root/
 ├─ index.html
 ├─ css/
-│ └─ game-shop.css
+│  └─ game-shop.css
 └─ images/
-├─ gold_coin.png
-├─ shop-owner.png
-├─ shield_old.png
-└─ sword_1.png
-
+   ├─ gold_coin.png
+   ├─ shop-owner.png
+   ├─ shield_old.png
+   └─ sword_1.png
+````
 
 ### How to Run
 1. Make sure your files follow the structure above.  
