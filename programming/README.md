@@ -1,10 +1,10 @@
-## Equipment Shop — JavaScript Basics (Revision)
+## ⚔️ Equipment Shop — JavaScript basics
 
 A short revision project demonstrating core JavaScript concepts such as variables, objects, functions, DOM manipulation, events, conditions, and simple UI state handling.
 
 ![giphy (5)](https://github.com/user-attachments/assets/e2ef6262-b45f-492f-a47c-409d89f19ba3)
 
-### What this project covers
+### 📘 What this project covers
 - **Variables & objects:** `playerInfo`, `shopKeeperInfo`, `swordInfo`, `ShieldInfo`
 - **DOM manipulation:** `document.getElementById`, updating `innerHTML` and `style`
 - **Functions:** `initGUI`, `buySword`, `buyShield`
@@ -12,7 +12,7 @@ A short revision project demonstrating core JavaScript concepts such as variable
 - **Events:** `onclick` for buttons
 - **Template literals:** using backticks (`` `...` ``) to dynamically add images to the output div
 
-### Folder Structure
+### 🗂️ Folder structure
 ```
 project-root/
 ├─ index.html
@@ -25,11 +25,11 @@ project-root/
    └─ sword_1.png
 ````
 
-### How to Run
+### 🚀 How to run
 1. Make sure your files follow the structure above.  
 2. Open `index.html` in your browser (double-click it or use **Live Server** in VS Code).
 
-### Suggestions for Improvement  
+### 💡 Suggestions for improvement  
 - **UI feedback:** disable buy buttons when the player doesn’t have enough gold.  
 - **Refactoring:** move price and quantity updates into helper functions.  
 - **Visual feedback:** show a short “toast” or message that fades away after a few seconds.  
