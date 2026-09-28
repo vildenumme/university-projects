@@ -2,18 +2,12 @@
 
 > **Ethical Hacking · Kristiania · 2026**
 
+![giphy (5)](https://giphy.com/gifs/getmanfred-bug-reported-NePGLzOtIkBcl3b8cn)
+
 This repository contains my penetration testing report created as part of the Ethical Hacking course in my Bachelor's degree in Cybersecurity at Kristiania.
 The project was a two-week assignment where the goal was to perform a penetration test against an intentionally vulnerable environment.
 
 Result: Passed ✅
-
----
-
-## 🎬 Report Preview
-
-<p align="center">
-  <img src="assets/report-preview.gif" alt="Penetration Testing Report Preview" width="750">
-</p>
 
 ---
 
