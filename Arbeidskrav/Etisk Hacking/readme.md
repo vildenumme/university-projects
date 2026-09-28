@@ -2,7 +2,7 @@
 
 > **Ethical Hacking · Kristiania · 2026**
 
-<p align="center">
+<p align="left">
   <img width="240" alt="Bug reported" src="https://github.com/user-attachments/assets/762a9409-9f52-46de-9e30-e13582f013d0">
 </p>
 
