@@ -2,7 +2,7 @@
 
 > **Ethical Hacking · Kristiania · 2026**
 
-![Bug reported](<img width="480" height="270" alt="giphy" src="https://github.com/user-attachments/assets/342a3ed5-f9ba-4de0-b514-8b71e4cf157d" />)
+![Bug reported](<img width="480" height="270" alt="giphy" src="https://github.com/user-attachments/assets/762a9409-9f52-46de-9e30-e13582f013d0" />)
 
 This repository contains my penetration testing report created as part of the Ethical Hacking course in my Bachelor's degree in Cybersecurity at Kristiania.
 The project was a two-week assignment where the goal was to perform a penetration test against an intentionally vulnerable environment.
